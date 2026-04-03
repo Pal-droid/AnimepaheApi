@@ -34,7 +34,7 @@ No environment variables needed! The app works out of the box.
 ## Example JSON
 
 ```http
-GET /search?q=the%20fragrant%20flower%20blooms%20with%20dignity
+GET /search?q=naruto
 ```
 
 Output:
@@ -42,22 +42,31 @@ Output:
 ```json
 [
   {
-    "id": 6234,
-    "title": "The Fragrant Flower Blooms with Dignity",
-    "url": "https://animepahe.si/anime/27a95751-0311-47ed-dbce-7f0680d5074a",
-    "year": 2025,
-    "poster": "https://i.animepahe.si/uploads/posters/7103371364ff1310373c89cf444ffc3e6de0b757694a0936ae80e65cfae400b5.jpg",
+    "id": 1571,
+    "title": "Naruto",
+    "url": "https://animepahe.com/anime/77bbe16e-fd87-13d9-a18c-4edb06884a33",
+    "year": 2002,
+    "poster": "https://i.animepahe.com/posters/85d36625d8fe4e51d4deb9ea4a543d71ed6397b5c439d4fc6dd0bc62861e03d2.jpg",
     "type": "TV",
-    "session": "27a95751-0311-47ed-dbce-7f0680d5074a"
+    "session": "77bbe16e-fd87-13d9-a18c-4edb06884a33"
   },
   {
-    "id": 279,
-    "title": "The iDOLM@STER",
-    "url": "https://animepahe.si/anime/b6b777aa-6827-3626-2b30-f0eaea4dbc29",
-    "year": 2011,
-    "poster": "https://i.animepahe.si/posters/c121185f6dadbe63ef45560032b41d2b5186e2ca39edfd0b2796c3cecaa552b0.jpg",
+    "id": 1,
+    "title": "Naruto Shippuden",
+    "url": "https://animepahe.com/anime/623e7c17-bfe4-d666-58eb-a6a934012011",
+    "year": 2007,
+    "poster": "https://i.animepahe.com/posters/f4c50c796beaddb3cb27f88bea181ce858768de4e6c59e37519fc15870472db8.jpg",
     "type": "TV",
-    "session": "b6b777aa-6827-3626-2b30-f0eaea4dbc29"
+    "session": "623e7c17-bfe4-d666-58eb-a6a934012011"
+  },
+  {
+    "id": 1012,
+    "title": "Naruto Spin-Off: Rock Lee & His Ninja Pals",
+    "url": "https://animepahe.com/anime/4bdd6e0c-ac0c-3908-9587-874b4bf29117",
+    "year": 2012,
+    "poster": "https://i.animepahe.com/posters/5d01b49ef31cdc6f5a4ba1e220244d3fb5e2fe4c122473c06f453da21c1ec1fa.jpg",
+    "type": "TV",
+    "session": "4bdd6e0c-ac0c-3908-9587-874b4bf29117"
   }
 ]
 ```
