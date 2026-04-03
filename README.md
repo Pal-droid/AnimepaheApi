@@ -74,7 +74,7 @@ Output:
 ---
 
 ```http
-GET /episodes?session=27a95751-0311-47ed-dbce-7f0680d5074a
+GET /episodes?session=77bbe16e-fd87-13d9-a18c-4edb06884a33
 ```
 
 Output:
@@ -82,18 +82,18 @@ Output:
 ```json
 [
   {
-    "id": 70730,
+    "id": 15779,
     "number": 1,
     "title": "Episode 1",
-    "snapshot": "https://i.animepahe.si/uploads/snapshots/22c034f704a286b5ce17cc33a3dccf9258cc83038e5bafbcc5a196b2584c3454.jpg",
-    "session": "800a1f7d29d6ebb94d2bfd320b2001b95d00decff4aaecaa6fbef5916379a762"
+    "snapshot": "https://i.animepahe.com/snapshots/6693c23144b7f3d2bc73242740527ea77baa1d2649180bdb63f35b6a0ef9188b.jpg",
+    "session": "18ea551da39ccf31e77f9702365193b45636c5ffe7168f209830a56607f2a9d3"
   },
   {
-    "id": 70823,
+    "id": 15780,
     "number": 2,
     "title": "Episode 2",
-    "snapshot": "https://i.animepahe.si/uploads/snapshots/baf28a9ea1fecf9bbee49844cf3b782632e487ff49d3ba5c93b56241719fab05.jpg",
-    "session": "4dd535ded2d2773bb3285881839d018c5787619de262dffb801ab4f78cf20123"
+    "snapshot": "https://i.animepahe.com/snapshots/44025fa8399d9d68584903c2b5b23c579fd1d73f33570d2d95e783895d97f757.jpg",
+    "session": "38517b2d536b4c2a2c0c082f1995eb26b04c8af98889afebdb26f344a33c324b"
   }
 ]
 ```
@@ -101,7 +101,7 @@ Output:
 ---
 
 ```http
-GET /sources?anime_session=27a95751-0311-47ed-dbce-7f0680d5074a&episode_session=800a1f7d29d6ebb94d2bfd320b2001b95d00decff4aaecaa6fbef5916379a762
+GET /sources?anime_session=77bbe16e-fd87-13d9-a18c-4edb06884a33&episode_session=18ea551da39ccf31e77f9702365193b45636c5ffe7168f209830a56607f2a9d3
 ```
 
 Output:
@@ -109,21 +109,15 @@ Output:
 ```json
 [
   {
-    "url": "https://kwik.si/e/KcfYGhr86Ww2",
-    "quality": "1080p",
-    "fansub": "KawaSubs",
+    "url": "https://kwik.cx/e/4q3V1NDdRVy9",
+    "quality": "800p",
+    "fansub": "df68",
     "audio": "jpn"
   },
   {
-    "url": "https://kwik.si/e/Sr2gRRoVz6wy",
-    "quality": "720p",
-    "fansub": "KawaSubs",
-    "audio": "jpn"
-  },
-  {
-    "url": "https://kwik.si/e/J7jBHBSJhTEv",
+    "url": "https://kwik.cx/e/GDFF1EyEUCLD",
     "quality": "360p",
-    "fansub": "KawaSubs",
+    "fansub": "df68",
     "audio": "jpn"
   }
 ]
@@ -132,14 +126,20 @@ Output:
 ---
 
 ```http
-GET /m3u8?url=https://kwik.si/e/uEPQKLMzFpaz
+GET /m3u8?url=https://kwik.cx/e/4q3V1NDdRVy9
 ```
 
 Output:
 
 ```json
 {
-  "m3u8": "https://vault-12.owocdn.top/stream/12/12/1478df0e98f767de547ac36d33bc92b73b9a5b7318fe3f3e81328fa31fc1eac3/uwu.m3u8"
+  "m3u8": "https://vault-01.uwucdn.top/stream/01/03/b92a392054c041a3f9c6eecabeb0e127183f44e547828447b10bca8d77523e6f/uwu.m3u8",
+  "referer": "https://kwik.cx/e/4q3V1NDdRVy9",
+  "headers": {
+    "Referer": "https://kwik.cx/e/4q3V1NDdRVy9",
+    "Origin": "https://kwik.cx"
+  },
+  "proxy_url": "/proxy?url=https%3A%2F%2Fvault-01.uwucdn.top%2Fstream%2F01%2F03%2Fb92a392054c041a3f9c6eecabeb0e127183f44e547828447b10bca8d77523e6f%2Fuwu.m3u8&referer=https%3A%2F%2Fkwik.cx%2Fe%2F4q3V1NDdRVy9"
 }
 ```
 

@@ -15,6 +15,14 @@ app.use(express.static('public'));
 // Create AnimePahe instance
 const pahe = new AnimePahe();
 
+function mapErrorToStatusCode(message) {
+  const text = String(message || '').toLowerCase();
+  if (text.includes('not found')) return 404;
+  if (text.includes('blocked') || text.includes('anti-bot')) return 503;
+  if (text.includes('forbidden')) return 403;
+  return 500;
+}
+
 // Routes
 app.get('/', (req, res) => {
   res.json({
@@ -51,7 +59,7 @@ app.get('/search', async (req, res) => {
     res.json(results);
   } catch (error) {
     console.error('Search error:', error);
-    res.status(500).json({ error: error.message });
+    res.status(mapErrorToStatusCode(error.message)).json({ error: error.message });
   }
 });
 
@@ -65,7 +73,7 @@ app.get('/episodes', async (req, res) => {
     res.json(episodes);
   } catch (error) {
     console.error('Episodes error:', error);
-    res.status(500).json({ error: error.message });
+    res.status(mapErrorToStatusCode(error.message)).json({ error: error.message });
   }
 });
 
@@ -81,7 +89,7 @@ app.get('/sources', async (req, res) => {
     res.json(sources);
   } catch (error) {
     console.error('Sources error:', error);
-    res.status(500).json({ error: error.message });
+    res.status(mapErrorToStatusCode(error.message)).json({ error: error.message });
   }
 });
 
@@ -95,7 +103,7 @@ app.get('/ids', async (req, res) => {
     res.json(ids);
   } catch (error) {
     console.error('IDs error:', error);
-    res.status(500).json({ error: error.message });
+    res.status(mapErrorToStatusCode(error.message)).json({ error: error.message });
   }
 });
 
@@ -119,7 +127,7 @@ app.get('/m3u8', async (req, res) => {
     });
   } catch (error) {
     console.error('M3U8 resolution error:', error);
-    res.status(500).json({ error: error.message });
+    res.status(mapErrorToStatusCode(error.message)).json({ error: error.message });
   }
 });
 
